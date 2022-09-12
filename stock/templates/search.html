@@ -1,0 +1,52 @@
+<html>
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="/static/css/search.css">
+</head>
+
+<body>
+    {% csrf_token %}
+    <div class="box">
+        <div class="first">
+            <form method="POST">
+                {% csrf_token %}
+                <input type="search" name="Search" placeholder="Search..." />
+                <input type="submit" value="搜尋" >
+            </form>
+            
+        </div>
+        <div class="stock">{{scode}}{{sname}}({{sfullname}})</div>
+        <div class="home"><a href="/index/">回首頁</a></div>
+        <div class="time">時間:{{stime}}</div>
+    </div>
+    <div class="box2">
+        <div class="latest_trade_price">即時股價<br>{{last_price}}</div>
+        <div class="openprice">開盤價格<br>{{open_price}}</div>
+        <div class="high">最高價<br>{{high_price}}</div>
+        <div class="low">最低價<br>{{low_price}}</div>
+    </div>
+    <div class="box3">
+        <div class="buy_btn" align='center'>
+            買進<br><br>
+            <table align='center'>
+                <tr><td>買入價</td><td align="right">買入數量</td></tr>
+                {% for i,j in buy %}
+                <tr><td>{{i}}</td><td align="right">{{j}}</td></tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="sold_btn" align='center'>
+            賣出<br><br>
+            <table align='center'>
+                <tr><td>賣出價</td><td align="right">賣出數量</td></tr>
+                {% for i,j in sell %}
+                <tr><td>{{i}}</td><td align="right">{{j}}</td></tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+body{
+    background-color:#202732 ;
+}
+.box{
+    height: 20vh;
+    background-color: #202732;
+    margin: 0;
+    padding: 0;
+    left: 0%;
+    top:0%;
+    border: 0ch;
+}
+.search,.timeSearch,.stockName,.timeImg,.time{
+    display: inline-block;
+    border: 0ch;
+}
+.box img{
+    height: 10vh;
+    border: 0ch;
+    padding: 0ch;
+
+}
+.stockName{
+    position: relative;
+    font-size: 5vh;
+    left: 25vw;
+    color: cadetblue;
+    margin: 0ch;
+}
+.time{
+    position: relative;
+    height: 6vh;
+    left: 55vw;
+    color: cadetblue;
+    margin: 0ch;
+}
+.image{
+    background-color: #202732;
+    height: 60vh;
+    width: 24vh;
+}
+.box button{
+    border:0;
+    background-color:#94a5b2;
+    color:#fff;
+    border-radius:15px;
+    cursor:pointer;
+    text-decoration: none;
+    padding: 15px;
+}
+.box button:hover{
+    color:black;
+    background-color:#fff;
+    border:0;
+    text-decoration: none;
+}
+.search-bar{
+    position: relative;
+    height: 6vh;
+    top: -3vh;
+}
+.search-btn{
+    position: relative;
+    height: 6vh;
+    top: -3vh;
+}

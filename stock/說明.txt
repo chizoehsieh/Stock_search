@@ -1,0 +1,3 @@
+主要程式路徑：final->migrations->search.py、views.py
+search.py是搜尋股票歷史資料，並畫出開收盤曲線圖
+views.py是建立資料庫及寫資料進資料庫的程式
